@@ -1,11 +1,8 @@
 {
-  "name": "svelte-app",
-  "version": "1.0.0",
-  "scripts": {
-    "build": "rollup -c",
-    "dev": "rollup -c -w",
-    "start": "sirv public"
-  },
+  "name": "@collabcode/styleguide",
+  "version": "0.0.1",
+  "description": "CollabCode's styleguide",
+  "main": "index.js",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^11.0.0",
     "@rollup/plugin-node-resolve": "^6.0.0",
@@ -17,5 +14,25 @@
   },
   "dependencies": {
     "sirv-cli": "^0.4.4"
-  }
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "start": "sirv public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CollabCodeTech/styleguide.git"
+  },
+  "keywords": [
+    "styleguide",
+    "css",
+    "svelte"
+  ],
+  "author": "CollabCode",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/CollabCodeTech/styleguide/issues"
+  },
+  "homepage": "https://github.com/CollabCodeTech/styleguide#readme"
 }

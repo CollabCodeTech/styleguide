@@ -1,5 +1,7 @@
 <script>
-  const src = 'img/logo.svg';
+  import logo from '../../img/logo.svg'
+
+  const src = logo;
   const alt = 'Logo da CollabCode'
 </script>
 

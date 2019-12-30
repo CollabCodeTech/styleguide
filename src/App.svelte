@@ -1,7 +1,7 @@
 <script>
-	import {Logo} from './index.js'
+	import { Logo } from './index.js';
 </script>
 
 <main>
-	<Logo />
+	<Logo type="horizontal" />
 </main>

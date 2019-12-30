@@ -22,4 +22,6 @@ TODO - Usuário
 TODO
 
 ## TODO
-- Criar extension para VSCode com auto complete
+- Criar extension para VSCode com auto complete;
+- Melhorar acessibilidade dos ícones do Material Design;
+

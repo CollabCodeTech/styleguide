@@ -20,7 +20,8 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "start": "sirv public"
+    "start": "sirv public",
+    "publish": "npm publish --access public"
   },
   "repository": {
     "type": "git",

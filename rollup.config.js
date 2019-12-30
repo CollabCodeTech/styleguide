@@ -1,3 +1,4 @@
+/* eslint-disable no-use-before-define */
 /* eslint-disable global-require */
 import svelte from 'rollup-plugin-svelte';
 import resolve from '@rollup/plugin-node-resolve';

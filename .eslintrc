@@ -4,7 +4,12 @@
     "es6": true
   },
   "plugins": [
-    "svelte3"
+    "svelte3",
+    "cypress",
+    "chai-friendly"
+  ],
+  "extends": [
+    "plugin:cypress/recommended"
   ],
   "parserOptions": {
     "ecmaVersion": 2019,
@@ -13,10 +18,13 @@
   "overrides": [
     {
       "files": [
-        "**/*.svelte",
+        "**/*.svelte"
       ],
       "processor": "svelte3/svelte3"
     }
   ],
-  "rules": {}
+  "rules": {
+    "no-unused-expressions": 0,
+    "chai-friendly/no-unused-expressions": 2
+  }
 }

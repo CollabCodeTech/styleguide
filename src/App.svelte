@@ -1,7 +1,6 @@
 <script>
-  import { Logo } from "./index.js";
+  import { Router } from "@sveltech/routify";
+  import { routes } from "@sveltech/routify/tmp/routes";
 </script>
 
-<main>
-  <Logo type="horizontal" />
-</main>
+<Router {routes} />

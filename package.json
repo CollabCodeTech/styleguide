@@ -7,8 +7,12 @@
     "@rollup/plugin-commonjs": "^11.0.0",
     "@rollup/plugin-image": "^2.0.0",
     "@rollup/plugin-node-resolve": "^6.0.0",
+    "cypress": "^3.8.1",
     "eslint": "^6.8.0",
+    "eslint-plugin-chai-friendly": "^0.5.0",
+    "eslint-plugin-cypress": "^2.8.1",
     "eslint-plugin-svelte3": "^2.7.3",
+    "npm-run-all": "^4.1.5",
     "rollup": "^1.20.0",
     "rollup-plugin-livereload": "^1.0.0",
     "rollup-plugin-svelte": "^5.0.3",
@@ -17,12 +21,19 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
-    "sirv-cli": "^0.4.4"
+    "@sveltech/routify": "^1.0.1-23",
+    "sirv-cli": "^0.4.4",
+    "start-server-and-test": "^1.10.6"
   },
   "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
     "build": "rollup -c",
-    "dev": "rollup -c -w",
-    "start": "sirv public",
+    "dev": "run-p watch:routify watch:rollup",
+    "watch:rollup": "rollup -c -w",
+    "watch:routify": "routify",
+    "start": "sirv public --single",
+    "test": "start-server-and-test start http-get://localhost:5000 cy:run",
     "publish": "npm publish --access public"
   },
   "repository": {

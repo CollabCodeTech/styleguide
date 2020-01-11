@@ -38,6 +38,7 @@ export default {
     }),
     commonjs(),
 
+
     !production && image(),
 
     // In dev mode, call `npm run start` once

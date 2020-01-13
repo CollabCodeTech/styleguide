@@ -1,4 +1,9 @@
 <style>
+  :global([class*="_subtitle"]) {
+    color: inherit;
+    text-decoration: none;
+  }
+
   :global(._subtitle1) {
     font-weight: var(--weight-regular);
     font-size: 1.6rem;

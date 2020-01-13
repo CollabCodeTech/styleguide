@@ -1,9 +1,11 @@
 <style>
   :global(:root) {
-    --gap-h-small: 10px;
+    --gap-smaller: 10px;
+    --gap-small: 20px;
+    --gap-medium: 40px;
+    --gap-big: 60px;
+    --gap-biggest: 80px;
 
-    --gap-v-small: 20px;
-    --gap-v-medium: 40px;
-    --gap-v-big: 60px;
+    --gap-menu-right: 220px;
   }
 </style>

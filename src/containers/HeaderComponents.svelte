@@ -1,15 +1,5 @@
 <script>
   import { MainLogo, MainTitle, MainMenu, MenuRight } from "../index.js";
-
-  export let menuRightActive = false;
-
-  function active(event) {
-    menuRightActive = !menuRightActive;
-  }
-
-  function inactive(event) {
-    menuRightActive = false;
-  }
 </script>
 
 <style>
@@ -58,6 +48,6 @@
     <MainTitle content="UI Style Guide" />
   </MainLogo>
 
-  <MainMenu click={active} />
-  <MenuRight click={inactive} active={menuRightActive} />
+  <MainMenu />
+  <MenuRight fixed={true} />
 </header>

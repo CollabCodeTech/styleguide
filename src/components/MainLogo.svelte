@@ -6,7 +6,7 @@
 
   export let type = "horizontal";
 
-  export const types = {
+  const types = {
     horizontal,
     horizontalLight,
     ball,
@@ -15,12 +15,15 @@
 </script>
 
 <style>
-  .logo > :global(svg) {
+  .main-logo > :global(svg) {
     height: 100%;
   }
 </style>
 
-<figure class="logo">
-  <svelte:component this={types[type]} class="logo" />
+<!--
+  <MenuLogo type="horizontal|horizontalLight|ball|ballText" />
+-->
+<figure class="main-logo">
+  <svelte:component this={types[type]} class="main-logo" />
   <slot />
 </figure>

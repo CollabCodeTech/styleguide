@@ -8,4 +8,6 @@
 
 <HeaderTop />
 
-<slot />
+<main class="_with-header">
+  <slot />
+</main>

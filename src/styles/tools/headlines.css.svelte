@@ -1,4 +1,9 @@
 <style>
+  :global([class*="_headline"]) {
+    color: inherit;
+    text-decoration: none;
+  }
+
   :global(._headline1) {
     font-weight: var(--weight-light);
     font-size: 9.6rem;

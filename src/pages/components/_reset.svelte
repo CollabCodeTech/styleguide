@@ -7,6 +7,12 @@
     box-sizing: border-box;
     padding-right: calc(var(--gap-menu-right) + var(--gap-smaller));
   }
+
+  @media(max-width: 1000px) {
+    .components {
+      padding-right: var(--gap-smaller);
+    }
+  }
 </style>
 
 <HeaderComponents menuRightActive={true} />

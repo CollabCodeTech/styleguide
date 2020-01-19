@@ -30,7 +30,7 @@
 
   .action-top.-with-menu-right {
     right: calc(var(--gap-menu-right) + var(--gap-smaller));
-    transform: translateX(120%);
+    transform: translateX(800%);
     z-index: -1;
 
     transition: opacity 200ms linear, transform 200ms linear, z-index 200ms linear;

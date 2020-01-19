@@ -2,9 +2,9 @@
   import { url } from "@sveltech/routify";
 
   export let title = "Menu";
-  export let active = true;
-  export let click = () => console.log("The click property is not defined");
   export let fixed = false;
+  export let active = fixed ? true : false;
+  export let click = () => console.log('The click property is not defined');
 
   const content = [
     {
@@ -45,14 +45,25 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1;
+  }
+  .wrapper-menu-right:before {
+    content: '';
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
 
     transition: z-index 50ms 100ms linear;
   }
-  .wrapper-menu-right.active {
-    z-index: 1;
+
+  .wrapper-menu-right.-active:before {
+    display: block;
+  }
+
+  .wrapper-menu-right.-fixed:before {
+    display: none;
   }
 
   .menu-right {
@@ -71,7 +82,7 @@
     transition: transform 200ms linear;
   }
 
-  .menu-right.active {
+  .menu-right.-active {
     transform: translateX(0);
   }
 
@@ -119,10 +130,16 @@
   .menu-right .item:hover .action {
     transform: translateX(var(--gap-smaller));
   }
+
+  @media(max-width: 1000px) {
+    .wrapper-menu-right.-active.-fixed:before {
+      display: block;
+    }
+  }
 </style>
 
-{#if fixed}
-  <nav class={`menu-right _box-shadow-light-left ${active ? 'active' : ''}`}>
+<div class={`wrapper-menu-right ${active ? '-active' : ''} ${fixed ? '-fixed' : ''}`} on:click={click}>
+  <nav class={`menu-right _box-shadow-light-left ${active ? '-active' : ''}`}>
     <h2 class="title _headline5">{title}</h2>
     {#each content as { category, links }}
       {#if category}
@@ -141,26 +158,4 @@
       {/if}
     {/each}
   </nav>
-{:else}
-  <div class={`wrapper-menu-right ${active ? 'active' : ''}`} on:click={click}>
-    <nav class={`menu-right _box-shadow-light-left ${active ? 'active' : ''}`}>
-      <h2 class="title _headline5">{title}</h2>
-      {#each content as { category, links }}
-        {#if category}
-          <a class="subtitle _subtitle1" href={`#${category}`}>{category}</a>
-        {/if}
-        {#if links}
-          <ol id={category} class="list _body2">
-            {#each links as { label, path, params }}
-              <li class="item">
-                <a class="action" href={$url(path, params)} target="_self">
-                  {label}
-                </a>
-              </li>
-            {/each}
-          </ol>
-        {/if}
-      {/each}
-    </nav>
-  </div>
-{/if}
+</div>

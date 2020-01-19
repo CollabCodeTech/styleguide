@@ -12,6 +12,12 @@
     ball,
     ballText
   };
+
+  function modifyinigClass(type) {
+    return `${type.name.toLowerCase().replace(/_/, "-")}`;
+  }
+
+  console.log(modifyinigClass(types[type]))
 </script>
 
 <style>
@@ -20,10 +26,7 @@
   }
 </style>
 
-<!--
-  <MenuLogo type="horizontal|horizontalLight|ball|ballText" />
--->
-<figure class="main-logo">
-  <svelte:component this={types[type]} class="main-logo" />
+<figure class={`main-logo ${modifyinigClass(types[type])}`}>
+  <svelte:component this={types[type]} />
   <slot />
 </figure>

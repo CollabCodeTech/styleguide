@@ -8,7 +8,7 @@
   }
 
   function inactive(event) {
-    menuRightActive = false;
+    event.target.classList.contains('wrapper-menu-right') && (menuRightActive = false)
   }
 </script>
 
@@ -17,6 +17,7 @@
     background-color: var(--color-pomp-and-power);
     height: 6vh;
     min-height: 56px;
+    min-width: 290px;
     margin-bottom: var(--gap-medium);
 
     display: flex;
@@ -50,6 +51,12 @@
   .header-top > :global(.main-menu) {
     height: 90%;
     fill: var(--color-platinum);
+  }
+
+  @media(max-width: 330px) {
+    .header-top :global(.main-title) {
+      font-size: 1.4em;
+    }
   }
 </style>
 

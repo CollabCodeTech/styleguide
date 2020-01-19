@@ -66,7 +66,11 @@
   }
 
   .section-component > .code {
-    margin-bottom: var(--gap-medium);
+    margin-bottom: var(--gap-small);
+  }
+
+  .section-component > .component {
+    margin-bottom: var(--gap-biggest);
   }
 
   .section-component > .component.-medium-h {
@@ -75,6 +79,23 @@
 
   .section-component > .component.-small-h {
     width: 20%;
+  }
+
+  @media(max-width: 1000px) {
+    .section-component > .component.-medium-h {
+      width: 60%;
+    }
+
+    .section-component > .component.-small-h {
+      width: 40%;
+    }
+  }
+
+  @media(max-width: 600px) {
+    .section-component > .component.-medium-h, 
+    .section-component > .component.-small-h {
+      width: 90%;
+    }
   }
 </style>
 
@@ -117,6 +138,12 @@
 
   <MainLogo />
   `} />
+    </div>   
+    <div class="component -medium-h">
+      <MainLogo />
+    </div>
+
+    <div class="code _body1">
       <Prism language="html" source={`
   <script>
     import { MainMenu } from '@collabcode/styleguide';
@@ -125,10 +152,10 @@
   <MainLogo type="horizontal" />
   `} />
     </div>
-
     <div class="component -medium-h">
       <MainLogo />
     </div>
+     
   </section>
 
   <section id="horizontalLight" class="section-component">
@@ -182,7 +209,7 @@
     import { MainMenu } from '@collabcode/styleguide';
   </script>
 
-  <MainLogo type="ball" />
+  <MainLogo type="ballText" />
   `} />
     </div>
 

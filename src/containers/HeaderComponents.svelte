@@ -1,5 +1,16 @@
 <script>
   import { MainLogo, MainTitle, MainMenu, MenuRight } from "../index.js";
+
+  let menuRightActive = true;
+
+  function active(event) {
+    menuRightActive = !menuRightActive;
+  }
+
+  function inactive(event) {
+    console.log(event.target.classList.contains('wrapper-menu-right'))
+    event.target.classList.contains('wrapper-menu-right') && (menuRightActive = false)
+  }
 </script>
 
 <style>
@@ -41,6 +52,12 @@
     height: 90%;
     fill: var(--color-platinum);
   }
+
+  @media(max-width: 330px) {
+    .header-top :global(.main-title) {
+      font-size: 2em;
+    }
+  }
 </style>
 
 <header class="header-top _center-h-inner _box-shadow-light-bottom -fixed">
@@ -48,6 +65,6 @@
     <MainTitle content="UI Style Guide" />
   </MainLogo>
 
-  <MainMenu />
-  <MenuRight fixed={true} />
+  <MainMenu click={active}/>
+  <MenuRight click={inactive} active={menuRightActive} fixed={true}/>
 </header>

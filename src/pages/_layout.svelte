@@ -1,5 +1,5 @@
 <script>
-  import { HeaderTop } from "../index.js";
+  import { HeaderTop } from "../containers/index.js";
 </script>
 
 <style>

@@ -1,5 +1,6 @@
 <script>
-  import { MainLogo, MainTitle, MainMenu, MenuRight } from "../index.js";
+  import { MenuRight } from "./index";
+  import { MainLogo, MainTitle, MainMenu} from "../index.js";
 
   export let menuRightActive = false;
 

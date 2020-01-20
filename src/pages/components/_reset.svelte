@@ -1,5 +1,5 @@
 <script>
-  import { HeaderComponents } from "../../index.js";
+  import { HeaderComponents } from "../../containers/index.js";
 </script>
 
 <style>

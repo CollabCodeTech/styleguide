@@ -18,6 +18,7 @@
   .search-field {
     background-color: rgba(235, 235, 235, 0.3 );
     color: var(--color-floral-white);
+    font-size: calc(var(--height) / 3.6);
     border: none;
     height: var(--height);
     border-radius: calc(var(--height) / 2);
@@ -51,6 +52,6 @@
 </style>
 
 <div class="wrapper-search-field" {style}>
-  <input type="search" class="search-field _subtitle2" {placeholder} />
+  <input type="search" class="search-field" {placeholder} />
   <svelte:component this={action.search} />
 </div>

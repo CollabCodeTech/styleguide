@@ -8,25 +8,27 @@
 </script>
 
 <style>
-  .wrapper-search-field {
+  .search-field {
     --height: 50px;
     --icon-height: calc(var(--height) - var(--gap-small));
+    display: inline-block;
     height: var(--height);
     position: relative;
   }
 
-  .search-field {
+  .input {
     background-color: rgba(235, 235, 235, 0.3 );
     color: var(--color-floral-white);
     font-size: calc(var(--height) / 3.6);
     border: none;
     height: var(--height);
+    width: 100%;  
     border-radius: calc(var(--height) / 2);
     padding-left: var(--gap-small);
     padding-right: calc(var(--gap-small) * 2 + var(--icon-height));
   }
 
-  .wrapper-search-field > :global(svg) {
+  .search-field > :global(svg) {
     position: absolute;
     top: 50%;
     right: var(--gap-small);
@@ -37,21 +39,21 @@
     transition: fill 150ms linear, transform 150ms linear;
   }
 
-  .search-field:focus + :global(svg),
-  .wrapper-search-field > :global(svg):hover {
+  .input:focus + :global(svg),
+  .search-field > :global(svg):hover {
     fill: var(--color-fiery-rose);
   }
 
-  .wrapper-search-field > :global(svg):hover {
+  .search-field > :global(svg):hover {
     transform: translateY(-50%) scale(1.2);
   }
 
-  .wrapper-search-field :global(path) {
+  .search-field :global(path) {
     fill: inherit;
   }
 </style>
 
-<div class="wrapper-search-field" {style}>
-  <input type="search" class="search-field" {placeholder} />
+<div class="search-field" {style}>
+  <input type="search" class="input" {placeholder} />
   <svelte:component this={action.search} />
 </div>

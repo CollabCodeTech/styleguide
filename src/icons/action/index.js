@@ -148,7 +148,7 @@ import redeem from "./redeem.svelte";
 import removeShoppingCart from "./remove_shopping_cart.svelte";
 import reorder from "./reorder.svelte";
 import room from "./room.svelte";
-import rotation3d from "./rodation_3d.svelte";
+import rotation3d from "./rotation_3d.svelte";
 import roundedCorner from "./rounded_corner.svelte";
 import rowing from "./rowing.svelte";
 import schedule from "./schedule.svelte";
@@ -234,7 +234,7 @@ import youtubeSearchedFor from "./youtube_searched_for.svelte";
 import zoomIn from "./zoom_in.svelte";
 import zoomOut from "./zoom_out.svelte";
 
-export {
+export default {
   accessibility,
   accessibleForward,
   accessible,

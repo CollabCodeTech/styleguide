@@ -71,6 +71,7 @@
 
   .section-component > .component {
     margin-bottom: var(--gap-biggest);
+    background-color: var(--color-purple-navy);
   }
 
   .section-component > .component.-medium-h {
@@ -131,7 +132,9 @@
   <SearchField placeholder="Busca" />
   `} />
     </div> 
-    <SearchField placeholder="Busca" />
+    <div class="component">
+      <SearchField placeholder="Busca" />
+    </div>
   </section>
 
   <section id="height" class="section-component">
@@ -152,7 +155,9 @@
   <SearchField placeholder="Busca" />
   `} />
     </div>
-    <SearchField placeholder="Busca" style="--height: 100px"/>
+    <div class="component">
+      <SearchField placeholder="Busca" style="--height: 100px"/>
+    </div>
   </section>
 
   <ActionTop withMenuRight={true} />

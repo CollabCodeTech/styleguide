@@ -10,4 +10,8 @@ describe('SearchField component', function () {
   it('verify placeholder contains Busca', function () {
     cy.get('.search-field').should('have.attr', 'placeholder', 'Busca');
   })
+
+  it('verify search icon', function () {
+    cy.get('.wrapper-search-field').find('svg');
+  })
 })

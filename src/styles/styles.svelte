@@ -11,7 +11,6 @@
   import shadows from "./tools/shadows.css.svelte";
   import lines from "./tools/lines.css.svelte";
   import withs from "./tools/withs.css.svelte";
-  import reset from "./generic/reset.css.svelte";
   import base from "./elements/base.css.svelte";
 </script>
 

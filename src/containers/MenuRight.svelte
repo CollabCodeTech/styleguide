@@ -15,28 +15,11 @@
           path: "/components/main-logo"
         },
         {
-          label: "Main Menu",
-          path: "/components/main-menu"
+          label: "Search Field",
+          path: "/components/search-field"
         },
-        {
-          label: "Main Title",
-          path: "/components/main-title"
-        }
       ]
     },
-    {
-      category: "Containers",
-      links: [
-        {
-          label: "Header Top",
-          path: "/components/header-top"
-        },
-        {
-          label: "Menu Right",
-          path: "/components/menu-right"
-        }
-      ]
-    }
   ];
 </script>
 

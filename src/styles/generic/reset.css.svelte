@@ -33,4 +33,7 @@
     border-collapse: collapse;
     border-spacing: 0;
   }
+  :global(input) {
+    font: inherit;
+  }
 </style>

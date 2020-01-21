@@ -16,8 +16,6 @@
   function modifyinigClass(type) {
     return `${type.name.toLowerCase().replace(/_/, "-")}`;
   }
-
-  console.log(modifyinigClass(types[type]))
 </script>
 
 <style>

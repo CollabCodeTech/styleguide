@@ -1,6 +1,6 @@
 {
   "name": "@collabcode/styleguide",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "CollabCode's styleguide",
   "main": "src/index.js",
   "devDependencies": {
